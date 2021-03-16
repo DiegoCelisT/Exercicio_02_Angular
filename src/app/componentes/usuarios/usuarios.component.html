@@ -2,12 +2,11 @@
 
 
 <ul [style] = "{'list-style-type': 'none', 'padding': '0px'}">
-    <li *ngFor= "let usuario of usuarios" >
+    <li *ngFor= "let usuario of usuarios" [style] = "{ 'background-color': 'antiquewhite', 'padding' : '5px', 'margin': '10px'}">
         <p><b>ID:</b> {{ usuario.id }}</p>
         <p><b>Nome:</b> {{ usuario.name }}</p>
         <p><b>Email:</b> {{ usuario.email }}</p>
         <p><b>Endereço:</b> {{ usuario.address.street }}, {{ usuario.address.suite }}, {{ usuario.address.city }}</p>
         <p><b>Telefone: </b>{{ usuario.phone }}</p>
-        <hr>
     </li>
 </ul>
