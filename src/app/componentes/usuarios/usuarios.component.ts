@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UsuariosService } from '../../services/usuarios.service'
 
 @Component({
   selector: 'app-usuarios',
@@ -7,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UsuariosComponent implements OnInit {
 
-  constructor() { }
+  usuarios: any = [];
+
+  constructor(usuariosServiço: UsuariosService) { //DCT
+
+    usuariosServiço.getUsuarios ()
+    .subscribe (usuarios => this.usuarios = usuarios);
+   }
 
   ngOnInit(): void {
   }

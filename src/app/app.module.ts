@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { ComponentesModule } from './componentes/componentes.module';
+//Adição da requisição HTTP: DCT
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -10,7 +12,8 @@ import { ComponentesModule } from './componentes/componentes.module';
   ],
   imports: [
     BrowserModule,
-    ComponentesModule
+    ComponentesModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
